@@ -33,6 +33,9 @@ install:
 script:
 - source ${TRAVIS_BUILD_DIR}/.travis/$TRAVIS_OS_NAME/$BLAS_LIB/test.sh
 
-matrix:
+matrix:    
+  include:
+    - os: linux
+      arch: arm64
   allow_failures:
     - go: tip
